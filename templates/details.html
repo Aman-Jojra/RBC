@@ -4,8 +4,7 @@
           <md-tab-label>{{tab.label}}</md-tab-label>
         </md-tab>
       </md-tabs>
-    </div>
-    <div class="tabpanel-container">
+      <div class="tabpanel-container">
       <div ng-if="data.tabs.length > 1 && data.grid.length > 0" role="tabpanel" id="tab1-content" aria-labelledby="tab1" md-swipe-left="next()" md-swipe-right="previous()">
         <md-list>
           <md-subheader class="md-no-sticky">Content</md-subheader>
@@ -19,6 +18,8 @@
       </div>
 
     </div>
+    </div>
+    
 
     <div style="visibility: hidden">
       <div class="md-dialog-container" id="myStaticDialog">
