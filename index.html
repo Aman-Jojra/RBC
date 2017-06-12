@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="UTF-8">
+  <title>Static Tabs w/ External Content</title>
+  <link rel='stylesheet' href='lib/core/core.css'>
+  <link rel="stylesheet" href="lib/style.css"> 
+</head>
+<body>
+  <div ng-controller="AppCtrl" ng-cloak="" class="tabsdemoStaticTabs" ng-app="MyApp">
+
+<div ng-controller="DashboardCtrl as ctrl" ng-cloak>
+  <md-toolbar class="md-menu-toolbar">
+    <div layout="row">
+      
+
+      <div>
+        <h2 class="md-toolbar-tools">RBC Financial Group</h2>
+        <md-menu-bar>
+            <md-menu>
+              <button ng-click="gotoLink('dashboard')">
+                Dashboard
+              </button>
+              
+            </md-menu>
+          <md-menu>
+            <button ng-click="$mdMenu.open()">
+              Go to
+            </button>
+            <md-menu-content>
+              <md-menu-item>
+                <md-menu>
+                  <md-button ng-click="$mdMenu.open()">Main Queue</md-button>
+                  <md-menu-content>
+                    <md-menu-item><md-button ng-click="sampleAction('UTR Main Queue', $event)">UTR Main Queue</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('LCTR Main Queue', $event)">LCTR Main Queue</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('UAR Main Queue', $event)">UAR Main Queue</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('CLF Scan Main Queue', $event)">CLF Scan Main Queue</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('CLF eForm Main Queue', $event)">CLF eForm Main Queue</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('EDD Main Queue', $event)">EDD Main Queue</md-button></md-menu-item>
+                  </md-menu-content>
+                </md-menu>
+              </md-menu-item>
+
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Reports', $event)">
+                  Reports
+                </md-button>
+              </md-menu-item>
+
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Security', $event)">
+                  Security
+                </md-button>
+              </md-menu-item>
+              <md-menu-divider></md-menu-divider>
+
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Version Information', $event)">
+                  Version Information
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+
+
+
+          <md-menu>
+            <button ng-click="$mdMenu.open()">
+              Action
+            </button>
+            <md-menu-content>
+                <md-menu-item>
+                <md-button ng-click="gotoLink('details')">
+                  Create LCTR
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Reports', $event)">
+                  Open LCTR
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Reports', $event)">
+                  Lock LCTR
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Reports', $event)">
+                  Reassign
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Reports', $event)">
+                  View Attachments
+                </md-button>
+              </md-menu-item>
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Reports', $event)">
+                  Transfer Internal
+                </md-button>
+              </md-menu-item>
+
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Security', $event)">
+                  Incident History
+                </md-button>
+              </md-menu-item>
+
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Version Information', $event)">
+                  Add an Action
+                </md-button>
+              </md-menu-item>
+              <md-menu-divider></md-menu-divider>
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Reports', $event)">
+                  Delete LCTR
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+
+          <md-menu>
+            <button ng-click="$mdMenu.open()">
+              Divisions
+            </button>
+            <md-menu-content>
+              <md-menu-item>
+                <md-menu>
+                  <md-button ng-click="$mdMenu.open()">RBC Banking</md-button>
+                  <md-menu-content>
+                    <md-menu-item><md-button ng-click="sampleAction('UTR Main Queue', $event)">RBC Banking</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('LCTR Main Queue', $event)">Global Financial Institutions</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('UAR Main Queue', $event)">Non-client scan</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('CLF Scan Main Queue', $event)">RBC Banking: Bridge to Canada</md-button></md-menu-item><md-menu-item><md-button ng-click="sampleAction('CLF Scan Main Queue', $event)">RBC Banking: Bridge to Canada</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('CLF Scan Main Queue', $event)">RBC Banking: Commercial/Corporate</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('CLF Scan Main Queue', $event)">RBC Banking: Other</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('CLF Scan Main Queue', $event)">RBC Banking: Personal</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('CLF Scan Main Queue', $event)">RBC Banking: Private/Professional</md-button></md-menu-item>
+                    <md-menu-item><md-button ng-click="sampleAction('CLF Scan Main Queue', $event)">RBC Banking: SB,SBCD, AG/Flag</md-button></md-menu-item>
+                    
+                    </md-menu-content>
+                </md-menu>
+              </md-menu-item>
+
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Reports', $event)">
+                  RBC Banking Other
+                </md-button>
+              </md-menu-item>
+
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Security', $event)">
+                  RBC Capital Markets Canada
+                </md-button>
+              </md-menu-item>
+              <md-menu-divider></md-menu-divider>
+
+              <md-menu-item>
+                <md-button ng-click="sampleAction('Version Information', $event)">
+                  RBC Direct Investment Inc
+                </md-button>
+              </md-menu-item>
+            </md-menu-content>
+          </md-menu>
+
+
+        </md-menu-bar>
+      </div>
+    </div>
+  </md-toolbar>
+
+  <md-content class="page-container" ng-view>
+
+    <!--<div ng-view></div>-->
+
+  </md-content>
+</div>
+
+
+
+
+
+
+
+
+
+
+    <script src='lib/core/angular.js'></script>
+    <script src='lib/core/angular-animate.min.js'></script>
+    <script src='lib/core/angular-route.min.js'></script>
+    <script src='lib/core/angular-aria.min.js'></script>
+    <script src='lib/core/angular-messages.min.js'></script>
+    <script src='lib/core/svg-assets-cache.js'></script>
+    <script src='lib/core/angular-material.js'></script>
+    <script src="lib/script.js"></script>
+</body>
+</html>

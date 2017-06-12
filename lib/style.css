@@ -1,0 +1,171 @@
+.tabsdemoStaticTabs md-tab-content {
+  padding: 25px;
+}
+
+.tabsdemoStaticTabs md-tab-content:nth-child(1) {
+  background-color: #42A5F5;
+}
+
+.tabsdemoStaticTabs md-tab-content:nth-child(2) {
+  background-color: #689F38;
+}
+
+.tabsdemoStaticTabs md-tab-content:nth-child(3) {
+  background-color: #26C6DA;
+}
+
+.tabsdemoStaticTabs .after-tabs-area>span {
+  margin-top: 25px;
+  padding-right: 15px;
+  vertical-align: middle;
+  line-height: 30px;
+  height: 35px;
+}
+
+.tabsdemoStaticTabs .after-tabs-area>md-checkbox {
+  margin-top: 26px;
+  margin-left: 0;
+}
+
+.tabpanel-container {
+  display: block;
+  position: relative;
+  background: white;
+  border: 0px solid black;
+}
+
+[role="tabpanel"] {
+  margin: 20px;
+  padding: 40px;
+  color: black;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  transition: all cubic-bezier(0.250, 0.460, 0.450, 0.940) 0.5s;
+  position: absolute;
+}
+
+[role="tabpanel"].ng-leave.ng-leave-active,
+[role="tabpanel"].ng-enter {
+  top: -300px;
+}
+
+[role="tabpanel"].ng-leave,
+[role="tabpanel"].ng-enter.ng-enter-active {
+  top: 0;
+}
+
+[role="tabpanel"].ng-leave {
+  z-index: 100;
+}
+
+.tabpanel-container [role="tabpanel"] {
+  padding: 0;
+}
+
+.dialogdemoBasicUsage #popupContainer {
+  position: relative;
+}
+
+.dialogdemoBasicUsage .footer {
+  width: 100%;
+  text-align: center;
+  margin-left: 20px;
+}
+
+.dialogdemoBasicUsage .footer,
+.dialogdemoBasicUsage .footer>code {
+  font-size: 0.8em;
+  margin-top: 50px;
+}
+
+.dialogdemoBasicUsage button {
+  width: 200px;
+}
+
+.dialogdemoBasicUsage div#status {
+  color: #c60008;
+}
+
+.dialogdemoBasicUsage .dialog-demo-prerendered md-checkbox {
+  margin-bottom: 0;
+}
+
+.md-tab>span {
+  cursor: pointer;
+}
+md-input-container{
+ min-width: 45%;
+}
+.form-details {
+    max-width: 44%;
+    position: absolute;
+    top: 10px;
+    left: 25%;
+}
+.select {
+  width: 97%;
+}
+md-radio-button {
+  float: left;
+}
+.radio {
+  min-width: 97%;
+}
+.radio > label {
+  margin-bottom: 30px;
+}
+.verticle md-radio-button {
+  float: none;
+}
+md-list-item > p {
+  max-width: 35%;
+}
+
+.menuBardemoBasicUsage .page-container {
+  padding: 32px; }
+
+.menuBardemoBasicUsage .page {
+  margin: 0 auto;
+  padding: 24px;
+  max-width: 680px;
+  box-shadow: 0px 1px 2px 1px rgba(0, 0, 0, 0.25); }
+
+.menuBardemoBasicUsage .page h1 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 0;
+  font-weight: normal; }
+
+.menuBardemoBasicUsage .page p {
+  line-height: 1.6rem; }
+
+.md-whiteframe-10dp {
+    margin: 0 15px;
+    padding: 0;
+}
+.page {
+  padding: 20px;
+}
+.layout-column h4 {
+    background-color: green;
+    margin: 0;
+    color: #fff;
+    padding: 15px;
+    text-align: center;
+}
+
+.layout-column a {
+    padding: 5px 10px;
+    color: green;
+    font-size: 14px;
+}
+.layout-column a md-icon {
+    color: green;
+    float: right;
+    margin-left: 30px;
+}
+.page-container {
+    height: 100%;
+    overflow: initial;
+}

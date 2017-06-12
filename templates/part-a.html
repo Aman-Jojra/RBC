@@ -1,0 +1,104 @@
+<md-dialog aria-label="Add Details" class="form-details">
+          <form name="userForm" ng-cloak>
+            <md-toolbar>
+              <div class="md-toolbar-tools">
+                <h2>Add Part-A Details</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                  <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+              </div>
+            </md-toolbar>
+
+            <md-dialog-content>
+              <div class="md-dialog-content">
+                
+                <md-input-container class="select">
+                  <label>RBC Employee Division</label>
+                  <md-select ng-model="userFormData.divison">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.divisions" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+
+                <md-input-container>
+                  <label>Last Name:</label>
+                  <input name="content" ng-model="userFormData.lastName"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>First Name:</label>
+                  <input name="content" ng-model="userFormData.firstName"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>Initials:</label>
+                  <input name="content" ng-model="userFormData.initials"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>Phone number:</label>
+                  <input name="content" ng-model="userFormData.phone"  type="number" >
+                </md-input-container>
+                <md-input-container>
+                  <label>Street Address</label>
+                  <input name="content" ng-model="userFormData.streetAddress"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>City</label>
+                  <input name="content" ng-model="userFormData.city"  >
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Province or State</label>
+                  <md-select ng-model="userFormData.state">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.states" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Country</label>
+                  <md-select ng-model="userFormData.country">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.countries" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container>
+                  <label>Postal Code:</label>
+                  <input name="content" ng-model="userFormData.postalCode"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>Employee ID number:</label>
+                  <input name="content" ng-model="userFormData.employedID"  type="number" >
+                </md-input-container>
+                <md-input-container>
+                  <label>Branch or Transit number:</label>
+                  <input name="content" ng-model="userFormData.branchNumber"  type="number" >
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Type of reporting entity</label>
+                  <md-select ng-model="userFormData.entity">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.entities" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+              </div>
+
+            </md-dialog-content>
+
+            <md-dialog-actions layout="row">
+
+              <span flex></span>
+              <md-button ng-click="cancel()">
+                Cancel
+              </md-button>
+              <md-button type="submit" ng-click="save()">
+                Submit
+              </md-button>
+            </md-dialog-actions>
+          </form>
+        </md-dialog>

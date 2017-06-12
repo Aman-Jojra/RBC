@@ -1,0 +1,122 @@
+<md-dialog aria-label="Add Details" class="form-details">
+          <form name="userForm" ng-cloak>
+            <md-toolbar>
+              <div class="md-toolbar-tools">
+                <h2>Add Part-D Details</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                  <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+              </div>
+            </md-toolbar>
+
+            <md-dialog-content>
+              <div class="md-dialog-content">
+                <h4>Information about Business, Corporation or Trust on whose behalf transaction was conducted</h4> <br>
+                <label>Incident Number: 20090430005423200445L</label>
+
+
+                <md-input-container>
+                  <label>1. Business, Corporation or Trust name:</label>
+                  <input name="content" ng-model="userFormData.trustName"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>1a. Account Manager #:</label>
+                  <input name="content" ng-model="userFormData.accountManager"  >
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>2. Client Type</label>
+                  <md-select ng-model="userFormData.dClientType">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.clientTypes" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container>
+                  <label>3. Type of business:</label>
+                  <input name="content" ng-model="userFormData.typeOfBusiness"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>SIC Code (Standard Industry Classification Code):</label>
+                  <input name="content" ng-model="userFormData.sicCode" >
+                </md-input-container>
+                <md-input-container>
+                  <label>BSC Code (Business Segment Code:</label>
+                  <input name="content" ng-model="userFormData.bscCode" >
+                </md-input-container>
+                <md-input-container>
+                  <label>Street Address</label>
+                  <input name="content" ng-model="userFormData.dStreetAddress"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>City</label>
+                  <input name="content" ng-model="userFormData.dCity"  >
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Province or State</label>
+                  <md-select ng-model="userFormData.dState">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.states" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Country</label>
+                  <md-select ng-model="userFormData.dCountry">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.countries" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container>
+                  <label>Postal Code or Zip code:</label>
+                  <input name="content" ng-model="userFormData.dPostalCode"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>Home Phone number:</label>
+                  <input name="content" ng-model="userFormData.dHomePhoneNumber"  type="number" >
+                </md-input-container>
+
+                <md-input-container>
+                  <label>Incorporation number:</label>
+                  <input name="content" ng-model="userFormData.incorporationNo"  >
+                  <h5>Enter N/A if none exists.</h5>
+                </md-input-container>
+
+                <md-input-container class="select">
+                  <label>Province or State of Incorporation:</label>
+                  <md-select ng-model="userFormData.stateOfIncorporation">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.states" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Country of Incorporation:</label>
+                  <md-select ng-model="userFormData.countryOfIncorporation">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.countries" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+              </div>
+
+            </md-dialog-content>
+
+            <md-dialog-actions layout="row">
+
+              <span flex></span>
+              <md-button ng-click="cancel()">
+                Cancel
+              </md-button>
+              <md-button type="submit" ng-click="save()">
+                Submit
+              </md-button>
+            </md-dialog-actions>
+          </form>
+        </md-dialog>

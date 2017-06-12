@@ -1,0 +1,114 @@
+<md-dialog aria-label="Add Details" class="form-details">
+          <form name="userForm" ng-cloak>
+            <md-toolbar>
+              <div class="md-toolbar-tools">
+                <h2>Add Part-C Details</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                  <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+              </div>
+            </md-toolbar>
+
+            <md-dialog-content>
+              <div class="md-dialog-content">
+                <h2>Information about individual conducting transaction(s)</h2> <br>
+                <label>Incident Number: 20090430005423200445L</label>
+
+
+                <md-input-container>
+                  <label>Surname:</label>
+                  <input name="content" ng-model="userFormData.surName"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>Given Name:</label>
+                  <input name="content" ng-model="userFormData.givenName"  >
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Client Type</label>
+                  <md-select ng-model="userFormData.clientType">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.clientTypes" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+
+                <md-input-container>
+                  <label>RBC SRF Number:</label>
+                  <input name="content" ng-model="userFormData.rbcSRFNo" type="number" >
+                </md-input-container>
+                
+                <md-input-container>
+                  <label>Street Address</label>
+                  <input name="content" ng-model="userFormData.cStreetAddress"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>City</label>
+                  <input name="content" ng-model="userFormData.cCity"  >
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Province or State</label>
+                  <md-select ng-model="userFormData.cState">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.states" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Country</label>
+                  <md-select ng-model="userFormData.cCountry">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.countries" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container>
+                  <label>Postal Code or Zip code:</label>
+                  <input name="content" ng-model="userFormData.cPostalCode"  >
+                </md-input-container>
+                <md-input-container>
+                  <label>Home Phone number:</label>
+                  <input name="content" ng-model="userFormData.homePhoneNumber"  type="number" >
+                </md-input-container>
+
+                <md-input-container class="select">
+                  <label>Individual Identifier:</label>
+                  <md-select ng-model="userFormData.identifier">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.identifiers" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container>
+                  <label>ID Number of individual identifier:</label>
+                  <input name="content" ng-model="userFormData.idNumber"  type="number" >
+                </md-input-container>
+                <md-input-container class="radio">
+                  <label>Place of issue - Applicable</label>
+                  <md-radio-group ng-model="userFormData.placeOfIssue">
+
+                    <md-radio-button value="true" class="md-primary">Yes</md-radio-button>
+                    <md-radio-button value="false"> No </md-radio-button>
+
+                    </md-radio-group>
+                </md-input-container>
+              </div>
+
+            </md-dialog-content>
+
+            <md-dialog-actions layout="row">
+
+              <span flex></span>
+              <md-button ng-click="cancel()">
+                Cancel
+              </md-button>
+              <md-button type="submit" ng-click="save()">
+                Submit
+              </md-button>
+            </md-dialog-actions>
+          </form>
+        </md-dialog>

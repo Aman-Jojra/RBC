@@ -1,0 +1,93 @@
+<md-dialog aria-label="Add Details" class="form-details">
+          <form name="userForm" ng-cloak>
+            <md-toolbar>
+              <div class="md-toolbar-tools">
+                <h2>Add Part-B Details</h2>
+                <span flex></span>
+                <md-button class="md-icon-button" ng-click="cancel()">
+                  <md-icon md-svg-src="img/icons/ic_close_24px.svg" aria-label="Close dialog"></md-icon>
+                </md-button>
+              </div>
+            </md-toolbar>
+
+            <md-dialog-content>
+              <div class="md-dialog-content">
+                <h2>Transaction Information</h2> <br>
+                <label>Incident Number: 20090430005423200445L</label>
+                <md-input-container class="select">
+                  <label>Is this transaction for:</label>
+                  <md-select ng-model="userFormData.transactionFor">
+                    <md-option ng-repeat="state in dataSource.transactionFors" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+
+                <md-input-container>
+                  <label>Date of Transaction:</label>
+                   <md-datepicker ng-model="userFormData.dateOfTransaction" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+                </md-input-container>
+                <md-input-container>
+                  <label>Time of Transaction: HH:MM (24 hour format)</label>
+                  <input name="content" ng-model="userFormData.timeOfTransaction"  >
+                </md-input-container>
+                <md-input-container>
+                  <label></label>
+                  <md-checkbox ng-model="userFormData.nightDepositIndicator" aria-label="Night Deposit/QuickDrop-Fasdeposit Indicator:">
+                    Night Deposit/QuickDrop-Fasdeposit Indicator
+                    </md-checkbox>
+                </md-input-container>
+                <md-input-container>
+                  <label>Date if other than date of transaction:</label>
+                   <md-datepicker ng-model="userFormData.otherDateOfTransaction" md-placeholder="Enter date" md-open-on-focus></md-datepicker>
+                </md-input-container>
+
+
+
+                <md-input-container>
+                  <label>Amount of Transaction:</label>
+                  <input name="content" ng-model="userFormData.amountOfTransaction"  type="number" >
+                </md-input-container>
+                <md-input-container>
+                  <label>Source of Funds:</label>
+                  <input name="content" ng-model="userFormData.sourceOfFunds"  >
+                </md-input-container>
+                
+                <md-input-container class="select">
+                  <label>Currency</label>
+                  <md-select ng-model="userFormData.currency">
+                   
+                    <md-option ng-repeat="state in dataSource.currencies" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+                <md-input-container class="select">
+                  <label>Method of Transaction conducted:</label>
+                  <md-select ng-model="userFormData.methodOfTransaction">
+                    <md-option><em>None</em></md-option>
+                    <md-option ng-repeat="state in dataSource.methodsOfTransactions" ng-value="state">
+                      {{state}}
+                    </md-option>
+                  </md-select>
+                </md-input-container>
+
+
+
+                
+              </div>
+
+            </md-dialog-content>
+
+            <md-dialog-actions layout="row">
+
+              <span flex></span>
+              <md-button ng-click="cancel()">
+                Cancel
+              </md-button>
+              <md-button type="submit" ng-click="save()">
+                Submit
+              </md-button>
+            </md-dialog-actions>
+          </form>
+        </md-dialog>
