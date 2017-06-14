@@ -1,49 +1,12 @@
 
+<md-list ng-cloak>
 
-    
-            
-            <div layout="row" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>
+  <md-subheader class="md-no-sticky">LCTR Collections</md-subheader>
+  <md-list-item ng-repeat-start="item in collection">
+    <p> {{ item.incidentNumber }} </p>
+    <md-checkbox ng-click="triggered(item)" class="md-secondary" ng-model="item.checked"></md-checkbox>
+  </md-list-item>
 
-                <md-whiteframe class="md-whiteframe-10dp" layout layout-align="center center">
-                    <div layout="column">
-                        <h4 class="section-header" flex>Open Incidents</h4>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)"  href="javascript:void(0)">Self <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                        <md-divider></md-divider>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Others <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                        <md-divider></md-divider>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Locked in 5 Mins <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                    </div>
-                </md-whiteframe>
-
-                <md-whiteframe class="md-whiteframe-10dp" layout layout-align="center center">
-                    <div layout="column">
-                        <h4 class="section-header" flex>Create Incident</h4>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Self <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                        <md-divider></md-divider>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Others <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                        <md-divider></md-divider>
-                        <p></p>
-                    </div>
-                </md-whiteframe>
-
-                <md-whiteframe class="md-whiteframe-10dp" layout layout-align="center center">
-                    <div layout="column">
-                        <h4 class="section-header" flex>Outstanding Incidents</h4>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Outstanding Incidents - First <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                        <md-divider></md-divider>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Outstanding Incidents - Second <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                        <md-divider></md-divider>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Outstanding Incidents - Third <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                    </div>
-                </md-whiteframe>
-
-                <md-whiteframe class="md-whiteframe-10dp" layout layout-align="center center">
-                    <div layout="column">
-                        <h4 class="section-header" flex>Reported Incidents</h4>
-                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Reported Incidents <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
-                        <md-divider></md-divider>
-                        <p></p>
-                        <p></p>
-                    </div>
-                </md-whiteframe>
-            </div>
+  <md-divider ng-repeat-end></md-divider>
+</md-list>
+<md-button class="md-primary md-raised" ng-click="editIncident()">EDIT</md-button>

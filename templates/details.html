@@ -1,4 +1,4 @@
-    <div class="md-padding">
+    <div class="p8">
       <md-tabs class="md-accent" md-selected="data.selectedIndex" md-align-tabs="{{data.bottom ? 'bottom' : 'top'}}">
         <md-tab ng-click="tabSelect(tab)" ng-repeat="tab in data.tabs" id="tab{{tab.id}}" ng-disabled="tab.disabled">
           <md-tab-label>{{tab.label}}</md-tab-label>
@@ -14,18 +14,17 @@
           </md-list-item>
         </md-list>
         <md-button class="md-primary md-raised" ng-click="edit(row)">EDIT</md-button>
-
+        
       </div>
 
     </div>
     </div>
-    
-
     <div style="visibility: hidden">
       <div class="md-dialog-container" id="myStaticDialog">
           <div ng-repeat="tab in data.tabs" ng-show="data.selectedIndex === tab.id">
             <div ng-include="'templates/' + templateMap[tab.id]"></div>
           </div>
-        
       </div>
     </div>
+
+    

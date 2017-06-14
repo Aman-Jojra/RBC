@@ -141,7 +141,6 @@ md-list-item > p {
   line-height: 1.6rem; }
 
 .md-whiteframe-10dp {
-    margin: 0 15px;
     padding: 0;
 }
 .page {
@@ -153,6 +152,9 @@ md-list-item > p {
     color: #fff;
     padding: 15px;
     text-align: center;
+}
+.layout-column {
+  width: 100%;
 }
 
 .layout-column a {
@@ -168,4 +170,14 @@ md-list-item > p {
 .page-container {
     height: 100%;
     overflow: initial;
+}
+.vert-tab {
+  max-width: 22%;
+  margin-left: 1%;
+}
+.p8{
+  padding: 8px;
+}
+.ml24{
+  margin-left: 24px;
 }

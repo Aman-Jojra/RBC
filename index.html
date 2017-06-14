@@ -171,14 +171,65 @@
       </div>
     </div>
   </md-toolbar>
-  <div class="page">
-      <h1>AML Dashboard</h1>
-        <div flex>
-          <md-content class="page-container" ng-view>
-          </md-content>
-          </div>
+  <h1 class="ml24">AML Dashboard</h1>
+  <div layout="row">
+      <div flex class="vert-tab">
+            <md-content class="page-container">
+    
+            
+            <div layout="column" layout-padding layout-wrap layout-fill style="padding-bottom: 32px;" ng-cloak>
+
+                <md-whiteframe class="md-whiteframe-10dp" layout layout-align="center center">
+                    <div layout="column">
+                        <h4 class="section-header" flex>Open Incidents</h4>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)"  href="javascript:void(0)">Self <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                        <md-divider></md-divider>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Others <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                        <md-divider></md-divider>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Locked in 5 Mins <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                    </div>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-10dp" layout layout-align="center center">
+                    <div layout="column">
+                        <h4 class="section-header" flex>Create Incident</h4>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Self <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                        <md-divider></md-divider>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Others <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                        <md-divider></md-divider>
+                    </div>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-10dp" layout layout-align="center center">
+                    <div layout="column">
+                        <h4 class="section-header" flex>Outstanding Incidents</h4>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Outstanding Incidents - First <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                        <md-divider></md-divider>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Outstanding Incidents - Second <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                        <md-divider></md-divider>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Outstanding Incidents - Third <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                    </div>
+                </md-whiteframe>
+
+                <md-whiteframe class="md-whiteframe-10dp" layout layout-align="center center">
+                    <div layout="column">
+                        <h4 class="section-header" flex>Reported Incidents</h4>
+                        <a ng-click="ctrl.sampleAction('Submenu', $event)" href="javascript:void(0)">Reported Incidents <md-icon md-svg-icon="img/icons/launch.svg"></md-icon></a>
+                        <md-divider></md-divider>
+                    </div>
+                </md-whiteframe>
+            </div>
+
+            </md-content>
+      </div>
+      <div flex><md-content class="page-container" ng-view>
+            </md-content></div>
     </div>
-</div>
+    
+  </div>
+
+
+  
 
 
 
