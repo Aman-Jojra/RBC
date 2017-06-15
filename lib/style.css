@@ -181,3 +181,9 @@ md-list-item > p {
 .ml24{
   margin-left: 24px;
 }
+span.accordion {
+    float: right;
+    font-weight: bold;
+    font-size: 20px;
+    cursor: pointer;
+}

@@ -1,5 +1,5 @@
 
-<md-list ng-cloak>
+<md-list ng-if="collection.length > 0" ng-cloak>
 
   <md-subheader class="md-no-sticky">LCTR Collections</md-subheader>
   <md-list-item ng-repeat-start="item in collection">
@@ -9,4 +9,4 @@
 
   <md-divider ng-repeat-end></md-divider>
 </md-list>
-<md-button class="md-primary md-raised" ng-click="editIncident()">EDIT</md-button>
+<md-button ng-if="collection.length > 0" class="md-primary md-raised" ng-click="editIncident()">EDIT</md-button>
