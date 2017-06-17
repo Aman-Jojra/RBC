@@ -21,7 +21,7 @@
     </div>
     <div style="visibility: hidden">
       <div class="md-dialog-container" id="myStaticDialog">
-          <div ng-repeat="tab in data.tabs" ng-show="data.selectedIndex === tab.id">
+          <div ng-repeat="tab in data.tabs" ng-show="data.selectedIndex == tab.id">
             <div ng-include="'templates/' + templateMap[tab.id]"></div>
           </div>
       </div>
