@@ -1,3 +1,6 @@
+md-tabs.md-accent>md-tabs-wrapper{
+  background-color: silver;
+}
 .tabsdemoStaticTabs md-tab-content {
   padding: 25px;
 }
@@ -93,6 +96,9 @@
 
 .md-tab>span {
   cursor: pointer;
+}
+.md-tab:not(.md-active)>span {
+  color: darkslateblue;
 }
 md-input-container{
  min-width: 45%;
